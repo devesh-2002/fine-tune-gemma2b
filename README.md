@@ -9,6 +9,12 @@ In this assignment, we focus on fine-tuning a pre-trained language model and dep
 1. Fork and Clone the repository
 2. Copy `.env.example` to `.env`
 3. Add the keys to the .env (HuggingFace Token and WandB Api Key)
+
+
+If you want to run both server and trainer, then you can run using shell script :
+```
+./run.sh
+```
    
 If you want to manually run :
 
