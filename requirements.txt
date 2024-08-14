@@ -1,0 +1,14 @@
+transformers
+fastapi
+accelerate
+trl
+peft
+torch
+datasets
+fire
+uvicorn 
+huggingface_hub
+bitsandbytes
+sentencepiece
+wandb
+python-dotenv
