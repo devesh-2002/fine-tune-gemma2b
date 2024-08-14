@@ -3,7 +3,9 @@
 1. Fork and Clone the repository
 2. Copy `.env.example` to `.env`
 3. Add the keys to the .env (HuggingFace Token and WandB Api Key)
+   
 If you want to manually run :
+
 4. Create a virtual env and activate it
 ```
 python -m venv venv
