@@ -4,9 +4,12 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import nest_asyncio
 import uvicorn
+import os
+
+HF_TOKEN = os.environ['HF_TOKEN'] 
 
 class Message(BaseModel):
-    role: str = Field(..., example="user")
+    role: str = Field(..., example="human")
     content: str = Field(..., example="I need help identifying a bolt thread.")
 
 class ChatCompletionRequest(BaseModel):
@@ -21,8 +24,8 @@ class ChatCompletionResponse(BaseModel):
 app = FastAPI()
 
 model_name = "devesh-2002/fine-tuned-gemma"
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name,token=HF_TOKEN)
+tokenizer = AutoTokenizer.from_pretrained(model_name,token=HF_TOKEN)
 
 @app.post("/v1/chat/completions", response_model=ChatCompletionResponse)
 async def chat_completions(request: ChatCompletionRequest):
