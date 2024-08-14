@@ -1,4 +1,10 @@
 # Tune AI MLE Assignment
+In this assignment, we focus on fine-tuning a pre-trained language model and deploying it as a web service. The main steps involved are:
+
+1. **Fine-Tuning a Pre-trained Model**: We use the `google/gemma-2b-pytorch` model and fine-tune it on a chat dataset (`tuneai/oasst2_top1_chatgpt_format`). 
+
+2. **Creating a Server**: We deploy the fine-tuned model using FastAPI and Uvicorn, creating an API that adheres to the OpenAI chat completion API specification.
+
 ## Setup and run the project
 1. Fork and Clone the repository
 2. Copy `.env.example` to `.env`
@@ -36,3 +42,15 @@ curl -X POST "http://localhost:8000/v1/chat/completions" \
     {"role": "human", "content": "I need help identifying a bolt thread. The hardware store is closed and the only tool I have is a ruler."},
   ]
 }'
+```
+## Learnings and Findings
+
+1. **Fine-Tuning**: The process of fine-tuning allowed us to adapt a large pre-trained PyTorch model to a specific dataset, improving its performance on conversational data. Key considerations included selecting appropriate hyperparameters and managing computational resources.
+
+2. **Configuration Management**: PyTorch models often require configuration files to ensure that the model is loaded with the correct settings. Proper management of these configurations is essential for accurate model operation and fine-tuning.
+
+3. **Deployment**: Setting up a FastAPI server for the model demonstrated the ease of integrating machine learning models into web applications.
+
+## Conclusion
+
+This assignment provided hands-on experience in both fine-tuning state-of-the-art PyTorch models and deploying them as a service. It highlighted the importance of configuration management in handling complex models and the practical aspects of integrating machine learning models into real-world applications.
