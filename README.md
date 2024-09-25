@@ -1,5 +1,5 @@
-# Tune AI MLE Assignment
-In this assignment, we focus on fine-tuning a pre-trained language model and deploying it as a web service. The main steps involved are:
+# Fine Tuned Gemma-2b-pytorch
+We focus on fine-tuning a pre-trained language model and deploying it as a web service. The main steps involved are:
 
 1. **Fine-Tuning a Pre-trained Model**: We use the `google/gemma-2b-pytorch` model and fine-tune it on a chat dataset (`tuneai/oasst2_top1_chatgpt_format`). 
 
