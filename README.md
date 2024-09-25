@@ -57,6 +57,3 @@ curl -X POST "http://localhost:8000/v1/chat/completions" \
 
 3. **Deployment**: Setting up a FastAPI server for the model demonstrated the ease of integrating machine learning models into web applications.
 
-## Conclusion
-
-This assignment provided hands-on experience in both fine-tuning state-of-the-art PyTorch models and deploying them as a service. It highlighted the importance of configuration management in handling complex models and the practical aspects of integrating machine learning models into real-world applications.
